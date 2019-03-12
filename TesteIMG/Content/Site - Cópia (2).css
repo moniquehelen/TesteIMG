@@ -1,0 +1,871 @@
+﻿body {
+    padding-top: 1%;
+    color: #000;
+    font: 24px sans-serif, Verdana;
+    height:8%;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 20px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/*Set width on the form input elements since they're 100% wide by default*/
+/*input,*/
+/*select,
+textarea {
+    max-width: 280px;
+}*/
+
+.navbar-fixed-top{
+    /*height:20%;*/
+    margin-top:2%;
+}
+
+#conteudo {
+    width: 83%;
+    float: right;
+    text-align: left;
+    margin: 0;
+}
+
+.menu {
+    /*height:50px;*/
+    /*list-style-type: none;
+    margin: 0;
+    padding: 2px;*/
+    /*float: left;*/
+}
+
+    .menu ul {
+        list-style: none;
+    }
+
+        .menu ul li {
+            display: inline-block;
+        }
+/*.menu ul li ol li {
+            display: inline-flex;
+        }*/
+
+/*.sidebar {
+    height: 80%;
+    background-color: #eaeaea;*/
+/*overflow-x: hidden;*/
+/*list-style-type: none;*/
+/*margin-left: 0;*/
+/*float: left;
+    border-color: #666;
+}*/
+
+/*.sidebar a:link {
+        color: #666;*/
+/*text-decoration: none;*/
+/*text-align: left;
+        background-color: #eaeaea;*/
+/*margin-left: 0;*/
+/*margin-top: 14px;*/
+/*}*/
+
+/*.sidebar ul:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+        display: block;
+    }
+.side li:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    display: block;
+}
+
+.sidebar ul li:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    display: block;
+}
+
+
+
+    .sidebar ul li {
+        /*margin-left: 0;*/
+/*margin-top: 10px;
+        list-style-type: none;
+        clear: both;
+        float: left;
+        text-decoration: none;
+        font: 12px sans-serif, Verdana;
+    }*/
+
+/* The side navigation menu */
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 80%;
+    overflow: auto;
+}
+
+    /* Sidebar links */
+    .sidebar a {
+        display: block;
+        color: black;
+        padding: 16px;
+        text-decoration: none;
+    }
+
+        /* Active/current link */
+        .sidebar a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        /* Links on mouse-over */
+        .sidebar a:hover:not(.active) {
+            background-color: #555;
+            color: white;
+        }
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+        .sidebar a {
+            float: left;
+        }
+
+    div.content {
+        margin-left: 0;
+    }
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+}
+
+
+/*.ul li {
+    text-decoration: none;
+    clear: both;*/
+/*margin-left: 0;*/
+/*margin-top: 14px;*/
+/*list-style-type: none;
+    clear: both;
+    float: left;*/
+/*text-decoration: none;*/
+/*font: 12px sans-serif, Verdana;*/
+/*}*/
+
+
+/*#nav {
+    height: 2%;
+    padding-top: 0.5%;
+    margin-left: 0.7%;
+    display: block;
+}*/
+
+.container-fluid {
+    /*border-top: 1px solid;*/
+    border-color: #e7e7e7;
+    padding-left: 0;
+}
+
+
+
+.a {
+    /*color: #666;
+    background-color: #808080;
+    margin-left: 0;
+    color: #666;
+    text-decoration: none;
+    text-align: left;
+    background-color: #eaeaea;
+    margin-left: 0;
+    font: 12px sans-serif, Verdana;*/
+}
+
+
+.breadcrumb {
+    margin-left: 10%;
+    padding-top: 0;
+    background: transparent;
+    font: 6px sans-serif, Verdana, #666;
+}
+
+
+#mydiv {
+    position: absolute;
+    z-index: 9;
+    border: 1px solid #808080;
+    text-align: left;
+    padding: 10px;
+    cursor: move;
+    /*z-index: 10;*/
+    background-color: #ffffff;
+    color: #000;
+    /**/
+    height: 10%;
+    width: 10%;
+    margin-left: 1%;
+}
+
+
+#item2 {
+    position: absolute;
+    z-index: 9;
+    border: 1px solid #808080;
+    text-align: left;
+    padding: 10px;
+    cursor: move;
+    background-color: #ffffff;
+    color: #000;
+    height: 10%;
+    width: 10%;
+    margin-left: 1%;
+}
+
+.cartao {
+    position: absolute;
+    z-index: 9;
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 10px;
+    cursor: move;
+    /*z-index: 10;*/
+    background-color: #ffffff;
+    color: #131021;
+    /*height: 20px;
+    width: 40px;*/
+    margin-left: 2%;
+    /*background: transparent;*/
+    /*border-left-color: aqua;
+    border-left-style: solid;*/
+    /*border-bottom-left-radius:80%;*/
+    /*border-left: 4px solid aqua;*/
+}
+
+#colcoll .cartao {
+    border-left: 4px solid red;
+    content: '\0f02d';
+}
+
+.colcoll .cartao {
+    border-left: 4px solid red;
+    content: '\0f02d';
+}
+
+
+#colnew .cartao, #colactive .cartao, #colclosed .cartao {
+    border-left: 4px solid #f2cb1d;
+}
+
+
+
+
+.droptarget {
+    /*float: left;*/
+    /*width: 100px;*/
+    /*height: 35px;*/
+    /*margin: 1px;*/
+    /*padding: 10px;*/
+    /*border: 6px solid white;*/
+}
+
+
+/*#mydivheader {
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: #fff;
+    color: #fff;
+}*/
+
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {
+    margin: 0 -5px;
+    margin-left: 17%;
+}
+
+    /* Clear floats after the columns */
+    .row:after {
+        /*content: "";*/
+        display: table;
+        clear: both;
+    }
+
+/* Style the counter cards */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 16px;
+    text-align: center;
+    /*background-color: #f1f1f1;*/
+    height: 80%;
+    width: 100%;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+/*/*/
+
+#boardtitle {
+    width: 1040px;
+    min-height: 1px;
+    position: absolute;
+    /*height: 5px;*/
+    width: 1600px;
+    margin-left: 18%;
+    /*margin-top: 4%;*/
+}
+
+
+#board {
+    width: 1000px;
+    min-height: 100px;
+    position: absolute;
+    height: 300px;
+    width: 1600px;
+    margin-left: 18%;
+    margin-top: 1.5%;
+}
+
+.title {
+    background-color: white;
+    text-align: left;
+    color: black;
+    /*padding: 2px 8px;*/
+}
+
+#colcoll {
+    /*position: absolute;
+    width: 440px;
+    min-height: 250px;
+    /**/
+    /*left: 0px;
+    border-color: white;*/
+    /*border: 1px;*/
+    /*background-color: white;*/
+    /**********************/
+    position: absolute;
+    width: 28%;
+    /*min-height: 250px;*/
+    /**/
+    /*left: 0px;*/
+    border-color: white;
+    border: 4px;
+    background-color: white;
+    margin-left: 0;
+}
+
+#colnew {
+    left: 20%;
+    /*background-color: #f4f4f4;*/
+}
+
+#colactive {
+    left: 45%;
+    /*background-color: #f4f4f4;*/
+}
+
+#colclosed {
+    left: 70%;
+    
+}
+
+#colnew, #colactive, #colclosed {
+    /*background-color: #ffffff;*/
+    position: absolute;
+    width: 30%;
+    min-height: 28%;
+    /*border: 2px solid #808080;*/
+    border-left: 4px solid white;
+    border-bottom: 4px solid white;
+    border-right: 4px solid white;
+    border-left: 4px solid white;
+    border-top: 4px solid white;
+    background-color: #f4f4f4;
+}
+
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    /*background-color: #eee;*/
+    /*color: #444;*/
+    cursor: pointer;
+    padding: 8px;
+    width: 100%;
+    text-align: left;
+    border-bottom: 2px;
+    border-bottom-color: white;
+    border-color: white;
+    outline: none;
+    transition: 0.4s;
+}
+
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .active, .accordion:hover {
+        background-color: #ccc;
+    }
+
+/* Style the accordion panel. Note: hidden by default */
+/*.panel {
+  
+    width: 30%;
+    background-color: white;
+    display: none;
+
+}*/
+
+
+#titlecoll {
+    position: absolute;
+    width: 28%;
+    /*min-height: 10px;*/
+    /**/
+    left: 0px;
+    /*border-color: white;
+    border: 2px;*/
+    /*background-color: white;*/
+    margin-left: 0;
+    text-align: left;
+}
+
+#titlenew {
+    left: 20%;
+    /*background-color: #f4f4f4;*/
+}
+
+#titleactive {
+    left: 45%;
+    /*background-color: #f4f4f4;*/
+}
+
+#titleclosed {
+    left: 70%;
+    /*background-color: #f4f4f4;*/
+}
+
+#titlenew, #titleactive, #titleclosed {
+    /*background-color: #ffffff;*/
+    position: absolute;
+    width: 30%;
+    /*min-height: 28%;*/
+    /*border: 2px solid #808080;*/
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+*[draggable=true] {
+    float: left;
+    min-width: 200px;
+    min-height: 450px;
+    /*border: 2px solid black;*/
+    margin: 10px;
+    font-weight: bold;
+    min-height: 60px;
+    /*background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.63, white), color-stop(0.92, rgb(5,161,245)));
+    background-image: -moz-linear-gradient( center top, white 63%, rgb(5,161,245) 92% );*/
+    -webkit-background-size: 1px 8px;
+    -moz-background-size: 1px 8px;
+    background-size: 1px 3px;
+    background-repeat: repeat;
+    /**/
+}
+
+.cardTitle {
+    /*background-color: rgb(255,255,255);*/
+    /*border: 2px solid white;*/
+    /*/*/
+    position: relative;
+    /*height:200px;
+    width:40px;*/
+}
+
+
+.grid-container {
+    display: grid;
+    grid-gap: 20px 20px;
+    grid-template-columns: auto auto auto auto;
+    /*background-color: #f4f4f4;*/
+    padding: 25px;
+}
+
+#grid-item {
+    /*background-color: rgba(255, 255, 255, 0.8);*/
+    background-color: #f4f4f4;
+    /*border: 1px solid rgba(0, 0, 0, 0.8);*/
+    padding: 200%;
+    /*font-size: 120px;*/
+    text-align: left;
+    position: relative;
+    height: 20%;
+    width: 80%;
+}
+
+#grid-item-new {
+    /*background-color: rgba(255, 255, 255, 0.8);*/
+    background-color: white;
+    /*border: 1px solid rgba(0, 0, 0, 0.8);*/
+    padding: 60%;
+    /*font-size: 120px;*/
+    text-align: left;
+    position: relative;
+    height: 20%;
+    width: 60%;
+}
+
+
+.panel {
+    padding: 0;
+    background-color: white;
+    /*max-height: 265px;
+    max-width: 1040px;*/
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    /*height: 600px;
+    width: 1040px;*/
+    height: 30%;
+    width: 100%;
+    display: none;
+}
+
+
+
+
+.accordion:after {
+    content: '\025B6'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: left;
+    margin-left: 5px;
+}
+
+.accordion.active:after {
+    content: "\025E2"; /* Unicode character for "minus" sign (-) */
+}
+
+
+
+
+.nav-tabs > li > a {
+    /* margin-right: 2px; */
+    line-height: 1;
+    border: 0;
+    border-color: none;
+    margin-right: 0;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    /*color: grey;*/
+    font-weight: bold;
+    cursor: default;
+    border: none;
+    border-bottom: 2px solid #03a9f4;
+}
+
+#tab {
+    border-color: none;
+}
+
+
+/*.panelmod {
+    padding: 0;
+    margin-top:0;
+  
+
+}*/
+
+
+.modal {
+    text-align: center;
+}
+
+.modal-header {
+    border-left: 8px solid #009dcf;
+    padding: 0.5%;
+}
+
+.modal-dialog {
+    /*display: none;*/
+    text-align: left;
+    vertical-align: middle;
+    width: 90%;
+    margin-top: 5%;
+}
+
+.modal label {
+    font-weight: normal;
+    padding: 0;
+    /*font: 24px arial, sans-serif, Verdana;*/
+}
+/*************************/
+.nav-tabs-modal > li > a {
+    /* margin-right: 2px; */
+    margin-top:2.5%;
+    line-height: 1;
+    border: 0;
+    border-color: none;
+    /*margin-right: 0;*/
+    float: right;
+    width: 6%;
+    height: 6%;
+    text-align: center;
+    background-color: #f4f4f4;
+    font-style: normal;
+    /*margin: 1px;*/
+    border: 1px solid #ccc;
+    border-bottom: none;
+    position: relative;
+    display: block;
+    z-index:0;
+}
+
+.nav-tabs-modal > li.active > a, .nav-tabs-modal > li.active > a:hover, .nav-tabs-modal > li.active > a:focus {
+    /*color: grey;*/
+    font-weight: bold;
+    cursor: default;
+    background-color:white;
+    /*border: none;*/
+    /*border-bottom: 2px solid #03a9f4;*/
+}
+
+.navmodal {
+    /*padding-left: 3%;*/
+    margin-bottom: 0;
+    list-style: none;
+}
+
+#tab {
+    border-color: none;
+}
+
+#boardmod {
+    /*margin-top: 2.7%;*/
+    width: 99%;
+    height: 60%;
+    float: right;
+
+    /*position: absolute;*/
+    
+    background-color: white;
+    overflow-y: scroll;
+}
+/*.tab-pane-mod {
+    background-color: white;
+    height: 30%;
+}*/
+
+/*.rowmod {
+    /*margin: 0 -5px;*/
+    /*background-color:#f4f4f4;*/
+    /*border:1px solid #cccccc;*/
+    /*height:15%;
+    width:100%*/
+
+/*}*/
+
+
+
+
+
+/***************************/
+/*.navmodal.nav-tabs-modal {
+    border: 1px solid #f4f4f4;
+}
+
+    .navmodal.nav-tabs-modal > ul {
+        float: right;
+        margin: 1px;
+        background-color: #f4f4f4;
+    }
+
+    .navmomdal.nav-tabs-modal > li {
+        float: right;
+        width: 6%;
+        height: 4%;
+        text-align: center;
+        background-color: white;
+        font-style: normal;
+        margin: 1px;
+        border: 1px solid #ccc;
+        border-bottom: none;
+        position: relative;
+        display: block;
+    }
+
+        .nav-tabs-modal > li > a {
+          
+            display: block;
+            background-color: white;
+        }
+
+.navmodal.nav-tabs > li > a > active {
+    border: 1px solid #ccc;
+    position: relative;
+    display: block;
+    background-color: white;
+}
+
+
+nav-modal.tab-pane {
+    background-color: white;
+    height:30%;
+}
+
+.nav-tab-pane.active {
+    background-color: white;
+    font: 24px sans-serif, Verdana;
+}
+
+
+
+
+.navmodal {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}*/
+
+
+
+
+
+
+
+/**busca***/
+/*.topnav {
+    overflow: hidden;
+    background-color: #e9e9e9;
+}*/
+
+    /* Style the links inside the navigation bar */
+    /*.topnav a {
+        float: left;
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 4px;
+        text-decoration: none;
+        font-size: 17px;
+    }*/
+
+        /* Change the color of links on hover */
+        /*.topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }*/
+
+        /* Style the "active" element to highlight the current page */
+        /*.topnav a.active {
+            /*background-color: #2196F3;*/
+            color: white;
+        }*/
+
+    /* Style the search box inside the navigation bar */
+    /*.topnav input[type=text] {
+        float: right;
+        padding: 4px;
+        border: none;*/
+        /*margin-top: 8px;
+        margin-right: 16px;
+        font-size: 17px;*/
+    /*}*/
+
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+@media screen and (max-width: 600px) {
+    .topnav a, .topnav input[type=text] {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+
+    .topnav input[type=text] {
+        border: 1px solid #ccc;
+    }
+}
+
+
+/********menu***********/
+.sidenav {
+    width: 130px;
+    position: fixed;
+    z-index: 1;
+    top: 20px;
+    left: 10px;
+    background: #eee;
+    /*overflow-x: hidden;*/
+    padding: 4px;
+    text-decoration: none;
+    margin-top: 18%;
+    height: 80%;
+    margin-left: 0;
+    float: left;
+}
+
+    .sidenav a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        text-align: left;
+        list-style-type: none;
+        font-size: 25px;
+        color: #444;
+        display: block;
+    }
+
+        .sidenav a:hover {
+            color: #064579;
+            list-style-type: none;
+        }

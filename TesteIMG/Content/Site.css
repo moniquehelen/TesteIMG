@@ -1,0 +1,422 @@
+﻿body {
+    padding-top: 1%;
+    color: #000;
+    font: 24px sans-serif, Verdana;
+    height: 8%;
+}
+
+.body-content {
+    padding-left: 20px;
+    padding-right: 15px;
+}
+
+
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+.navbar-fixed-top {
+    margin-top: 2%;
+}
+
+#conteudo {
+    width: 83%;
+    float: right;
+    text-align: left;
+    margin: 0;
+}
+
+.menu {
+}
+
+    .menu ul {
+        list-style: none;
+    }
+
+        .menu ul li {
+            display: inline-block;
+        }
+
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 80%;
+    overflow: auto;
+}
+
+
+    .sidebar a {
+        display: block;
+        color: black;
+        padding: 16px;
+        text-decoration: none;
+    }
+
+
+        .sidebar a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .sidebar a:hover:not(.active) {
+            background-color: #555;
+            color: white;
+        }
+
+div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+        .sidebar a {
+            float: left;
+        }
+
+    div.content {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+}
+
+
+.container-fluid {
+    border-color: #e7e7e7;
+    padding-left: 0;
+}
+
+
+.breadcrumb {
+    margin-left: 10%;
+    padding-top: 0;
+    background: transparent;
+    font: 6px sans-serif, Verdana, #666;
+}
+
+
+.cartao {
+    position: absolute;
+    z-index: 9;
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 10px;
+    cursor: move;
+    background-color: #ffffff;
+    color: #131021;
+    margin-left: 2%;
+}
+
+
+
+.colcoll .cartao {
+    border-left: 4px solid red;
+}
+
+.colnew .cartao, .colactive .cartao {
+    border-left: 4px solid #f2cb1d;
+}
+
+.colclosed .cartao {
+    border-left: 4px solid #099fce;
+}
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+
+.row {
+    margin: 0 -5px;
+    margin-left: 17%;
+}
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+#boardtitle {
+    width: 1040px;
+    min-height: 1px;
+    position: absolute;
+    width: 1600px;
+    margin-left: 18%;
+}
+
+
+#board {
+    width: 1000px;
+    min-height: 100px;
+    position: absolute;
+    height: 300px;
+    width: 1600px;
+    margin-left: 18%;
+    margin-top: 1.5%;
+}
+
+.title {
+    background-color: white;
+    text-align: left;
+    color: black;
+}
+
+.colcoll {
+    position: absolute;
+    width: 28%;
+    border-color: white;
+    border: 4px;
+    background-color: white;
+    margin-left: 0;
+}
+
+.colnew {
+    left: 20%;
+}
+
+.colactive {
+    left: 45%;
+}
+
+.colclosed {
+    left: 70%;
+}
+
+.colnew, .colactive, .colclosed {
+    position: absolute;
+    width: 30%;
+    min-height: 28%;
+    border-left: 4px solid white;
+    border-bottom: 4px solid white;
+    border-right: 4px solid white;
+    border-left: 4px solid white;
+    border-top: 4px solid white;
+    background-color: #f4f4f4;
+}
+
+.accordion {
+    cursor: pointer;
+    padding: 8px;
+    width: 100%;
+    text-align: left;
+    border-bottom: 2px;
+    border-bottom-color: white;
+    border-color: white;
+    outline: none;
+    transition: 0.4s;
+}
+
+    .active, .accordion:hover {
+        background-color: #ccc;
+    }
+
+    .accordion:after {
+        content: '\025B6'; /*(+)*/
+        font-size: 13px;
+        color: #777;
+        float: left;
+        margin-left: 5px;
+    }
+
+    .accordion.active:after {
+        content: "\025E2"; /*(-)*/
+    }
+
+
+#titlecoll {
+    position: absolute;
+    width: 28%;
+    left: 0px;
+    margin-left: 0;
+    text-align: left;
+}
+
+#titlenew {
+    left: 20%;
+}
+
+#titleactive {
+    left: 45%;
+}
+
+#titleclosed {
+    left: 70%;
+}
+
+#titlenew, #titleactive, #titleclosed {
+    position: absolute;
+    width: 30%;
+    text-align: left;
+}
+
+
+*[draggable=true] {
+    float: left;
+    min-width: 200px;
+    min-height: 450px;
+    margin: 10px;
+    font-weight: bold;
+    min-height: 60px;
+    -webkit-background-size: 1px 8px;
+    -moz-background-size: 1px 8px;
+    background-size: 1px 3px;
+    background-repeat: repeat;
+}
+
+.cardTitle {
+    position: relative;
+}
+
+
+.panel {
+    padding: 0;
+    background-color: white;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    height: 30%;
+    width: 100%;
+    display: none;
+}
+
+.nav-tabs > li > a {
+    line-height: 1;
+    border: 0;
+    border-color: none;
+    margin-right: 0;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    font-weight: bold;
+    cursor: default;
+    border: none;
+    border-bottom: 2px solid #03a9f4;
+}
+
+#tab {
+    border-color: none;
+}
+
+.modal {
+    text-align: center;
+}
+
+.modal-content {
+    position: relative;
+    height: 100%;
+}
+
+.modal-header {
+    border-left: 8px solid #009dcf;
+    padding: 0.5%;
+}
+
+.modal-dialog {
+    text-align: left;
+    vertical-align: middle;
+    width: 90%;
+    height: 60%;
+    margin-top: 5%;
+}
+
+.modal label {
+    font-weight: normal;
+    padding: 0;
+}
+
+.navmodal {
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.nav-tabs-modal > li > a {
+    margin-top: 2.5%;
+    line-height: 1;
+    border: 0;
+    border-color: none;
+    float: right;
+    width: 6%;
+    height: 6%;
+    text-align: center;
+    background-color: #f4f4f4;
+    font-style: normal;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    position: relative;
+    display: block;
+    z-index: 0;
+}
+
+.nav-tabs-modal > li.active > a, .nav-tabs-modal > li.active > a:hover, .nav-tabs-modal > li.active > a:focus {
+    font-weight: bold;
+    cursor: default;
+    background-color: white;
+}
+
+
+
+#tab {
+    border-color: none;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .topnav a, .topnav input[type=text] {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+
+    .topnav input[type=text] {
+        border: 1px solid #ccc;
+    }
+}
+
+#boardmod {
+    width: 99%;
+    height: 100%;
+    float: right;
+    position: absolute;
+    background-color: white;
+    overflow-y: scroll;
+}
