@@ -1,0 +1,163 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+
+
+<div id="conteudo">
+    <h3>SIDEC Team</h3>
+    @*<p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+        <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
+</div>
+
+
+
+
+@*<div class="row">*@
+
+@*<div id="board">*@
+@*<div class="row">
+        <div class="column" id="col1">
+
+            <div class="card" id="card">
+
+                <div id="mydiv" class="w3-panel w3-leftbar w3-border-red">
+
+                    <p>Move</p>
+                    <p>this</p>
+                    <p>DIV</p>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>*@
+
+<div class="row">
+    <div id="boardtitle">
+        <div id="titlecoll">
+            <div class="title">Collapsed all</div>
+        </div>
+        <div id="titlenew">
+            <div class="title">New</div>
+        </div>
+        <div id="titleactive">
+            <div class="title">Active</div>
+        </div>
+        <div id="titleclosed">
+            <div class="title">Closed</div>
+        </div>
+    </div>
+    <div id="board">
+        <div id="coll" class="droptarget">
+            @*<div class="title">Collapsed all</div>*@
+
+
+            <div id="item1" draggable="true">
+                <div class="cardTitle">
+                    Learn HTML5
+                </div>
+            </div>
+            <div id="item2" draggable="true">
+                <div class="cardTitle">
+                    Learn CSS3
+                </div>
+            </div>
+        </div>
+        <div id="new" class="droptarget">
+            @*<div class="title">New</div>*@
+
+        </div>
+        <div id="active" class="droptarget">
+            @*<div class="title">Active</div>*@
+        </div>
+
+        <div id="closed" class="droptarget">
+            @*<div class="title">Closed</div>*@
+        </div>
+
+    </div>
+</div>
+
+
+
+@section scripts
+{
+
+    <script type="text/javascript"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js">
+    </script>
+
+    <script>
+
+        $('document').ready(init);
+
+        function init() {
+            $('#item1, #item2').bind('dragstart', function (event) {
+                event.originalEvent.dataTransfer.setData("text/plain", event.target.getAttribute('id'));
+                event.target.style.opacity = "0.4";
+            });
+            // bind the dragover event on the board sections
+            $('#new, #active, #closed').bind('dragover', function (event) {
+                event.preventDefault();
+            });
+            // bind the drop event on the board sections
+            $('#new, #active, #closed').bind('drop', function (event) {
+                var notecard = event.originalEvent.dataTransfer.getData("text/plain");
+                event.target.style.border = "";
+                event.target.style.backgroundColor = '#f4f4f4';
+                event.target.appendChild(document.getElementById(notecard));
+                event.preventDefault();
+            });
+            $('#new, #active, #closed').bind("drag", function (event) {
+
+
+            });
+            $('#new, #active, #closed').bind("dragenter", function (event) {
+                if (event.target.className == "droptarget") {
+                    //event.target.style.border = "3px dotted red";
+                    event.target.style.backgroundColor = '#dff6dd';
+                }
+            });
+
+            $('#new, #active, #closed').bind("dragend", function (event) {
+                event.target.style.opacity = "1";
+
+
+
+            });
+
+            $('#new, #active, #closed').bind("dragover", function (event) {
+                event.target.style.border = "";
+
+            });
+
+            $('#new, #active, #closed').bind("dragleave", function (event) {
+                if (event.target.className == "droptarget") {
+                    event.target.style.border = "";
+                    event.target.style.backgroundColor = '#f4f4f4';
+
+                }
+            });
+        }
+
+
+
+
+
+
+
+ 
+
+    </script>
+
+}
+

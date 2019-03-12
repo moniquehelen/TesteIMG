@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Azure DevOps</title>
+    @Styles.Render("~/Content/css")
+    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+
+    <table style="width:100%; margin-left:1.5%;" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <th align="center" style="width:10%;" valign="middle">
+                <img src="~/Imagens/az_lg.png" />
+                <font color="#666" size="3">
+                    &nbsp;&nbsp;Azure
+                </font>
+                <font color="#3487d8" size="3">
+                    <b>DevOps</b>
+                </font>
+
+            </th>
+
+
+            <th align="center" style=" width:70%;" valign="middle">
+                <ol class="breadcrumb">
+                    <li><a href="#">imagem-solucoes</a></li>
+                    <li><a href="#">SIDEC</a></li>
+                    <li><a href="#">Sprints</a></li>
+                </ol>
+
+
+            </th>
+
+
+            <th align="right" style="width:20%;" valign="middle">
+                <input type="text" placeholder="Search..">
+                <button type="submit"><i class="fa fa-search"></i></button>
+                <i class="fa fa-list"></i>
+                <i class="fa fa-calendar-o"></i>
+            </th>
+        </tr>
+    </table>
+
+   
+
+    <div class="body-content" style="height:80%">
+        <div class="container-fluid" style="border-top: 1px solid; border-color: #e7e7e7; height:80%;">
+            <div class="sidebar" style="width:17%; height:80%;">
+
+                <a href="#">
+                    <img src="~/Imagens/SIDEC.png" width="43" height="41" />
+                    SIDEC
+                </a>
+                <a href="#">
+                    <img src="~/Imagens/overview.png" />
+                    Overview
+                </a>
+
+                <a href="#">
+
+                    Work Items
+                </a>
+
+                <a href="#">
+
+                    Boards
+                </a>
+
+                <a href="#">
+
+                    Backlogs
+                </a>
+
+                <a href="#">
+
+                    Sprints
+                </a>
+
+                <a href="#">
+
+                    Queries
+                </a>
+
+
+
+
+                <a href="#">
+                    <img src="~/Imagens/board.png" /> Boards
+                </a>
+                <a href="#">
+                    <img src="~/Imagens/repos.png" /> Repos
+                </a>
+                <a href="#">
+                    <img src="~/Imagens/pipeline.png" /> Pipelines
+                </a>
+                <a href="#">
+                    <img src="~/Imagens/testplan.png" /> Test Plans
+                </a>
+                <a href="#"><img src="~/Imagens/artifact.png" /> Artifacts</a>
+
+            </div>
+
+
+
+            @RenderBody()
+         
+       
+        </div>
+
+    </div>
+
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    @section scripts
+{
+
+    }
+</body>
+
+
+</html>

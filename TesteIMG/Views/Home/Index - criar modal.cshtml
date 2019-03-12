@@ -1,0 +1,451 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<div class="container-fluid">
+    <div class="row">
+        <h3>
+            &nbsp;  <img src="~/Imagens/SIDECsprint.png" /> SIDEC Team
+            <i class="glyphicon glyphicon-menu-down"></i>
+            <i class="glyphicon glyphicon-star-empty" style="color:#ffd800"></i>
+            <i class="fa fa-user-o"></i>
+        </h3>
+
+    </div>
+
+    <div class="row" style="margin-left:18%">
+
+        @*<div id="tabs">*@
+        <ul class="nav nav-tabs" id="tab">
+            <li class="active">
+                <a href="#Taskboard" data-toggle="tab"><h5>Taskboard</h5></a>
+            </li>
+            <li>
+                <a href="#Backlog" data-toggle="tab"><h5>Backlog</h5></a>
+            </li>
+            <li>
+                <a href="#Capacity" data-toggle="tab"><h5>Capacity</h5></a>
+            </li>
+            <li>
+                <a data-target="#ModalNew" data-toggle="modal"> <h5>  + New Work Item <i class="glyphicon glyphicon-menu-down"></i> </h5></a>
+            </li>
+        </ul>
+
+    </div>
+
+
+    <div id="boardtitle" style="height:0%; width:80%;">
+        <div id="titlecoll">
+            <div class="title"> Collapsed all</div>
+        </div>
+        <div id="titlenew">
+            <div class="title">New</div>
+        </div>
+        <div id="titleactive">
+            <div class="title">Active</div>
+        </div>
+        <div id="titleclosed">
+            <div class="title">Closed</div>
+        </div>
+
+    </div>
+
+
+    @*</div>*@
+
+
+    <div class="tab-content">
+
+        <div class="tab-pane active in" id="Taskboard">
+
+            <div id="board" style="overflow-y: scroll; height:60%; width:80%;">
+
+                <button id="accordion1" data-id="1" class="accordion"> &nbsp; <img src="~/Imagens/task.png" /> &nbsp; [Request] Limitar todos os campos dos formulários</button>
+
+                <div class="panel">
+                    <div id="colcoll" class="droptarget">
+
+                        <div id="i1" class="cartao" draggable="true">
+                            <div class="cardTitle">
+                                1141 Nova atividade <br />
+                                Unassigned<br />
+                                State<br />
+                                New
+                            </div>
+                        </div>
+                        <div id="i2" class="cartao" draggable="true">
+                            <div class="cardTitle">
+                                1139 Alteração no backend
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="colnew" class="droptarget">
+                        <div class="title"></div>
+
+                    </div>
+
+                    <div id="colactive" class="droptarget">
+                        <div class="title"></div>
+                    </div>
+
+                    <div id="colclosed" class="droptarget">
+                        <div class="title"></div>
+                    </div>
+                </div>
+
+                @*<button id="accordion2" class="accordion">&nbsp; <img src="~/Imagens/task.png" /> &nbsp; [Inbox] O card das atividades encerradas nao esta funcionando</button>
+                <div class="panel">
+                    <div class="panel">
+
+                        <div id="colcoll2" class="colcoll droptarget">
+                            <div class="title"></div>
+                        </div>
+
+                        <div id="colnew2" class="colnew droptarget">
+                            <div class="title"></div>
+
+                        </div>
+
+                        <div id="colactive2" class="colactive droptarget">
+                            <div class="title"></div>
+                        </div>
+
+                        <div id="colclosed2" class="colclosed droptarget">
+                            <div class="title"></div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <button id="accordion3" class="accordion">&nbsp; <img src="~/Imagens/task.png" /> &nbsp; [Inbox] erro de autenticação ao entrar (ter que entrar em nova solicitação)</button>
+                <div class="panel">
+                    <div class="panel">
+                    </div>
+                </div>
+
+                <button id="accordion4" class="accordion">&nbsp; <img src="~/Imagens/task.png" /> &nbsp; [encaminhamento] ao encaminhar, 'o encaminhamento por' é o mesmo do 'encaminhar para'</button>
+                <div class="panel">
+                    <div class="panel">
+                    </div>
+                </div>
+
+                <button id="accordion5" class="accordion">&nbsp; <img src="~/Imagens/task.png" /> &nbsp; [motivos] campo motivo grande</button>
+                <div class="panel">
+                    <div class="panel">
+                    </div>
+                </div>
+                <button id="accordion6" class="accordion">&nbsp; <img src="~/Imagens/task.png" /> &nbsp; [capacitação] não adiciona campo com muitos caracteres</button>
+                <div class="panel">
+                    <div class="panel">
+                    </div>
+                </div>*@
+
+
+            </div>
+
+        </div>
+        <div class="tab-pane" id="Backlog">
+            <div id="board" style="overflow-y: scroll; height:60%; width:80%;">
+
+
+
+
+
+
+
+
+            </div>
+
+        </div>
+        <div class="tab-pane" id="Capacity">
+            <div id="board" style="overflow-y: scroll; height:60%; width:80%;">
+                Capacity
+            </div>
+        </div>|
+
+    </div>
+
+</div>
+
+
+<div id="ModalNew" class="modal fade" role="document" data-toggle="modal" data-backdrop="static">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <a data-ng-href="#" data-dismiss="modal" class="close" style="float:right; margin-right:0.7%;">&times;</a>
+                <a data-ng-href="#" data-dismiss="modal" class="close" style="float:right; margin-right:0.7%;"><i class="glyphicon glyphicon-resize-full"></i></a>
+                <h6 class="modal-title"> &nbsp; <img src="~/Imagens/ustory.png" /> &nbsp; USER STORY 1136*</h6>
+                <h3><label style="width:100%;">1136 &nbsp; <input type="text" placeholder="Digite uma descrição..." id="DescAtiv" style="width:95%;"></label></h3>
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary" id="btnSaveClose"> <i class="glyphicon glyphicon-floppy-remove"></i> Save & Close</button>
+                    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="glyphicon glyphicon-menu-down"></i> <span class="sr-only">toggle dropdown</span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">action</a>
+                        <a class="dropdown-item" href="#">another action</a>
+                        <a class="dropdown-item" href="#">something else here</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">separated link</a>
+                    </div>
+                </div>
+
+                <h6>
+                    <label style="width:100%;">
+                        Cassia Salles Gomes Rezende
+                        <label style="margin-left:10%;"> <i class="fa fa-comments-o"></i> 0 comments  Add tag</label>
+                        <label style="margin-left:80%;">
+
+                            &nbsp;  <i class="fa fa-eye"></i> &nbsp; Follow &nbsp; <i class="glyphicon glyphicon-repeat"></i>&nbsp;<i class="fa fa-mail-reply"></i>&nbsp;<i class="fa fa-ellipsis-h"></i>
+                        </label>
+                    </label>
+
+                </h6>
+
+
+
+            </div>
+            <div class="modal-body" style="height:60%; background-color: #f8f8f8">
+
+                <label style="margin-left:1%;"> State</label>
+                <label style="margin-left:2%;">
+                    <i class="fa fa-comments-o"></i> New
+                </label>
+
+                <label style="margin-left:5%;"> Area</label>
+                <label style="margin-left:6%;">
+                    <i class="fa fa-comments-o"></i> SIDEC
+                </label>
+
+                <label style="margin-left:82%;"> Updated by Mateus de Pontes Moraes 4 hour ago</label>
+
+                <label style="margin-left:1%;"> State</label>
+                <label style="margin-left:2%;">
+                    <i class="fa fa-comments-o"></i> New
+                </label>
+
+                <label style="margin-left:5%;"> Area</label>
+                <label style="margin-left:6%;">
+                    <i class="fa fa-comments-o"></i> SIDEC
+                </label>
+
+                @Html.Partial("_Novo")
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+@section scripts
+{
+
+    @*<script type="text/javascript"></script>*@
+    @*<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js">*@
+    @*</script>*@
+
+    <script type="text/javascript">
+
+        $('document').ready(init);
+
+        function init() {
+            $('.cartao').bind('dragstart', function (event) {
+                event.originalEvent.dataTransfer.setData("text/plain", event.target.getAttribute('id'));
+                event.target.style.opacity = "0.4";
+
+            });
+            // bind the dragover event on the board sections
+            $('#colnew, #colactive, #colclosed').bind('dragover', function (event) {
+                event.preventDefault();
+            });
+            // bind the drop event on the board sections
+            $('#colnew, #colactive, #colclosed').bind('drop', function (event) {
+                var notecard = event.originalEvent.dataTransfer.getData("text/plain");
+                event.target.style.border = "";
+                event.target.style.backgroundColor = '#f4f4f4';
+                event.target.appendChild(document.getElementById(notecard));
+                event.preventDefault();
+            });
+            $('#colnew, #colactive, #colclosed').bind("drag", function (event) {
+
+
+            });
+            $('#colnew, #colactive, #colclosed').bind("dragenter", function (event) {
+                if (event.target.className == "droptarget") {
+                    //event.target.style.border = "3px dotted red";
+                    event.target.style.backgroundColor = '#dff6dd';
+                }
+            });
+
+            $('#colnew, #colactive, #colclosed').bind("dragend", function (event) {
+                event.target.style.opacity = "1";
+
+
+
+            });
+
+            $('#colnew, #colactive, #colclosed').bind("dragover", function (event) {
+                event.target.style.border = "";
+
+            });
+
+            $('#colnew, #colactive, #colclosed').bind("dragleave", function (event) {
+                if (event.target.className == "droptarget") {
+                    event.target.style.border = "";
+                    event.target.style.backgroundColor = '#f4f4f4';
+
+                }
+            });
+        }
+        /**************/
+
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                /* Toggle between adding and removing the "active" class,
+                to highlight the button that controls the panel */
+                this.classList.toggle("active");
+
+                /* Toggle between hiding and showing the active panel */
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+
+
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active.after");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+
+        //<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        var count = 10;
+
+        $('#ModalNew').on("shown.bs.modal", function () {
+
+            $('#btnSaveClose').on('click', function (e) {
+                count++;
+                var vDescAtiv = $('#DescAtiv').val();
+                var img = '<img src="..//Imagens/task.png" />';
+                var vsection = "<button class='accordion active active.after' id=accord" + count + " > &nbsp; " + img + "&nbsp; " + vDescAtiv + " </button>"
+                    + "<div id='panel' class='panel' style='display: block; max-height:208px;'> <div id=colcoll' class='droptarget'>" +
+                    "<div id='i1' class='cartao #collcol .cartao' draggable='true'>" +
+                    "<div class='cardTitle'>" +
+                    vDescAtiv +
+                    " </div>" +
+                    "</div>" +
+                    "</div>" +
+                    "<div id='colnew' class='droptarget'>" +
+                    //"   <div class='title'></div>" +
+                    "</div>" +
+
+                    "  <div id='colactive' class='droptarget'>" +
+                    //"     <div class='title'></div>" +
+                    " </div>" +
+
+                    "  <div id='colclosed' class='droptarget'>" +
+                    //"       <div class='title'></div>" +
+                    "  </div>" +
+                    "</div > ";
+
+
+                $('#board').append(vsection);
+
+                var obj = "accord" + count;
+                var acc = document.getElementById(obj);
+
+
+                var i;
+
+                //for (i = 0; i < acc.length; i++) {
+                acc.addEventListener("click", function () {
+                    /* Toggle between adding and removing the "active" class,
+                    to highlight the button that controls the panel */
+                    this.classList.toggle("active");
+
+                    /* Toggle between hiding and showing the active panel */
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                        panel.style.display = "none";
+
+                    } else {
+                        panel.style.display = "block";
+                    }
+                });
+                // }
+
+
+                var acc = document.getElementById("accord" + count);
+                var i;
+
+                //for (i = 0; i < acc.length; i++) {
+                acc.addEventListener("click", function () {
+                    this.classList.toggle("active.after");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                       
+
+                    }
+                });
+                //}
+
+                //$(function () {
+                //    $(".accordion").resizable({
+                //        minHeight: 140,
+                //        minWidth: 600,
+                //        resize: function () {
+
+                //$(document).foundation();
+                //        }
+                //    });
+                //});
+
+
+                //$('#accord').append(vpanel);
+                alert('ok');
+
+
+                $('#ModalNew').modal('hide');
+            });
+        });
+
+    </script>
+
+}
+
